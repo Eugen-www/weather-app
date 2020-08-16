@@ -41,7 +41,7 @@ getTodaysWeatherInfo(url, apiKey, city).then((data) => {
   city = document.querySelector(".weather-app__main-info__city").innerText =
     data.name;
   weatherDescription.innerText = data.weather[0].description;
-  weatherImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  weatherImg.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   windFlow.innerText = data.wind.speed;
   feelsLike.innerText = Math.round(data.main.feels_like);
   humidity.innerText = data.main.humidity;
@@ -65,7 +65,7 @@ getFiveDaysWeatherInfo(url, apiKey, city)
     console.log(time);
     forecastCard.forEach((card,index) => {
       card.children[0].innerText = time[index].weather[0].main;
-      card.children[1].children[0].src = `http://openweathermap.org/img/wn/${time[index].weather[0].icon}.png`;
+      card.children[1].children[0].src = `https://openweathermap.org/img/wn/${time[index].weather[0].icon}.png`;
       card.children[2].innerText = time[index].dt_txt.substr(5, 5);
     });
   });
@@ -84,3 +84,4 @@ setInterval(
   })(),
   3600000
 );
+
