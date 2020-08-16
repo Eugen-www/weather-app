@@ -1,6 +1,6 @@
 // For work with API
 const apiKey = "5b3eb5d921a2a89f826394f97c8cdb78";
-const url = "http://api.openweathermap.org/data/2.5";
+const url = "https://api.openweathermap.org/data/2.5";
 
 // Grab the elements
 let city =
