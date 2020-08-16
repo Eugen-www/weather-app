@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(122, 122, 122);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Oswald", sans-serif;
+}
+body[data-time="day"] {
+	color: #5c5c5c;
+}
+body[data-time="day"] .weather-app {
+	background-color: #fff;
+}
+body[data-time="day"] .weather-app__main-info,
+body[data-time="day"] .weather-app__secondary-info {
+	background-color: #ecffff;
+}
+body[data-time="night"] {
+	color: #fff;
+}
+body[data-time="night"] .weather-app {
+	background-color: rgb(20, 15, 61);
+}
+body[data-time="night"] .weather-app__main-info {
+	background-color: transparent;
+}
+body[data-time="night"] .weather-app__secondary-info,
+body[data-time="night"] .weather-app__forecasts {
+	background-color: rgb(48, 35, 149);
+}
+.weather-app {
+	width: 420px;
+	max-height: 600px;
+	min-height: 100vh;
+	background-color: #fff;
+	border-radius: 30px;
+	overflow: auto;
+}
+.weather-app__header {
+	text-align: center;
+	padding: 15px 0;
+	font-size: 24px;
+}
+.weather-app__main-info {
+	padding: 30px 0;
+	width: 100%;
+	min-height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.weather-app__main-info__temp .temp-num {
+	font-size: 42px;
+	position: relative;
+}
+.weather-app__main-info__temp .temp-num:after {
+	content: "°";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 90%;
+	top: 0px;
+	font-size: 24px;
+}
+.weather-app__main-info__temp .temp-celsium {
+	font-size: 36px;
+}
+.weather-app__main-info__city {
+	font-size: 36px;
+}
+.weather-app__main-info__description {
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.weather-app__secondary-info {
+	margin: 25px auto 0;
+}
+.weather-app__secondary-info,
+.weather-app__forecasts {
+	background: #ecffff;
+	min-width: 380px;
+	width: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.secondary-info {
+	width: 33%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.secondary-info .num {
+	font-size: 20px;
+	color: #4debf6;
+}
+.secondary-info .img {
+	margin: 5px 0;
+}
+.weather-app__forecasts {
+	margin: 20px auto 40px;
+}
+
+.forecast {
+	width: 20%;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
